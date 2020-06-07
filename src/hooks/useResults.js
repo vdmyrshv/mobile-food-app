@@ -14,11 +14,10 @@ const useResults = () => {
 				params: {
 					term: searchTerm,
 					location: "boston",
-					limit: 2
+					limit: 50
 				}
 			})
 			setLoading(false)
-			console.log(response.data.businesses)
 			setResults(response.data.businesses)
 		} catch (err) {
 			console.log(`request failed:  ${err}`)
@@ -32,7 +31,7 @@ const useResults = () => {
 	}
 
 	useEffect(() => {
-		searchAPI("cake")
+		searchAPI("french")
 	}, [])
 
 	return { error, loading, results, searchAPI }

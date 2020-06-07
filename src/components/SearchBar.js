@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
 	backgroundStyle: {
 		backgroundColor: "#afafaf",
 		height: 50,
-		borderRadius: 4,
+		borderRadius: 100,
 		marginHorizontal: 10,
-		marginVertical: 5,
+		marginVertical: 10,
 		display: "flex",
 		flexDirection: "row",
 		alignItems: "center",
 		paddingHorizontal: 10,
-		overflow: "hidden"
+        overflow: "hidden"
 	},
 	iconStyle: {
 		marginRight: 10,
