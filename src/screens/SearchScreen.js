@@ -15,7 +15,7 @@ import useResults from "../hooks/useResults"
 const SearchScreen = () => {
 	const [term, setTerm] = useState("")
 
-	const { error, loading, results, searchAPI } = useResults()
+    const { error, loading, results, searchAPI } = useResults()
 
 	return (
 		<View style={{ flex: 1 }}>
@@ -24,7 +24,7 @@ const SearchScreen = () => {
 				We have found {results.length} results
 			</Text>
 			{loading ? (
-				<ActivityIndicator size="large" color="darkcyan" />
+				<ActivityIndicator style={styles.spinnerStyle} size="large" color="orange" />
 			) : (
 				<ScrollView>
 					<ResultsList
@@ -61,5 +61,8 @@ export default SearchScreen
 const styles = StyleSheet.create({
 	infoStyle: {
 		marginLeft: 10
-	}
+    },
+    spinnerStyle: {
+        flex: 1
+    }
 })
